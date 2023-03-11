@@ -22,7 +22,8 @@ def number_of_rounds(name, receive_expression, true_expression):
             count_true_answer += 1
             print('Correct!')
         else:
-            print(f"'{answer_user}' is wrong answer ;(. Correct answer was '{right_answer}'.")
+            print(f"'{answer_user}' is wrong answer ;(. "
+                  f"Correct answer was '{right_answer}'.")
             break
     else:
         print(f'Congratulations, {name}!')

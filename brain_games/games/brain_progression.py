@@ -18,8 +18,12 @@ def true_expression(expression):
     split_expression = expression.split()
     unknow_number = split_expression.index('..')
     if unknow_number == 0:
-        return str(int(split_expression[1]) - (int(split_expression[-1]) - int(split_expression[-2])))
+        return str(int(split_expression[1]) - \
+               (int(split_expression[-1]) - int(split_expression[-2])))
     elif unknow_number == len(split_expression) - 1:
-        return str(int(split_expression[-2]) + (int(split_expression[1]) - int(split_expression[0])))
+        return str(int(split_expression[-2]) + \
+               (int(split_expression[1]) - int(split_expression[0])))
     else:
-        return str(int(split_expression[unknow_number - 1]) + ((int(split_expression[unknow_number + 1]) - int(split_expression[unknow_number - 1])) // 2))
+        return str(int(split_expression[unknow_number - 1]) + \
+               ((int(split_expression[unknow_number + 1]) - \
+               int(split_expression[unknow_number - 1])) // 2))
