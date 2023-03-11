@@ -2,8 +2,7 @@ from random import randint, choice
 
 
 def receive_expression():
-    expression = f'{randint(1, 101)} '\
-                 f'{choice(["+", "-", "*"])} {randint(1, 101)}'
+    expression = f'{randint(1, 101)} {choice(["+", "-", "*"])} {randint(1, 101)}'
     return expression
 
 

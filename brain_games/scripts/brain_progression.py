@@ -1,7 +1,6 @@
 #!/usr/bin/env python3
 from brain_games.general_logic import greet, welcome_user, number_of_rounds
-from brain_games.games.brain_progression import (
-            receive_expression, true_expression)
+from brain_games.games.brain_progression import receive_expression, true_expression
 
 
 def main():
