@@ -14,3 +14,6 @@ https://asciinema.org/a/9rvRuRJ2mmlXhItSPhjNe3cVX
 
 #brain-progression
 https://asciinema.org/a/12gjzDJuvfJ6Z7GbaJ6LQbpzH
+
+#brain-prime
+https://asciinema.org/a/PA36J9YoUbQitxQmb1abEOzTB 
