@@ -1,13 +1,12 @@
 from random import randint
 
 
-def receive_expression():
+RULES_GAME = 'Answer "yes" if the number is even, otherwise answer "no".'
+
+
+def get_question_and_answer():
     expression = randint(1, 101)
-    return expression
-
-
-def true_expression(expression):
     if expression % 2 == 0:
-        return "yes"
+        return expression, "yes"
     else:
-        return 'no'
+        return expression, "no"

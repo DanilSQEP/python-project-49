@@ -1,13 +1,12 @@
 #!/usr/bin/env python3
-from brain_games.general_logic import greet, welcome_user, number_of_rounds
-from brain_games.games.brain_progression import receive_expression, true_expression
+from brain_games.general_logic import run_game
+from brain_games.games.brain_progression import (
+    RULES_GAME, get_question_and_answer
+)
 
 
 def main():
-    greet()
-    name = welcome_user()
-    print('What number is missing in the progression?')
-    number_of_rounds(name, receive_expression, true_expression)
+    run_game(RULES_GAME, get_question_and_answer)
 
 
 if __name__ == "__main__":

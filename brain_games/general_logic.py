@@ -1,23 +1,17 @@
 import prompt
 
 
-def greet():
+def run_game(RULES_GAME, get_question_and_answer):
+    NUM_OF_ROUNDS = 3
     print('Welcome to the Brain Games!')
-
-
-def welcome_user():
     name = prompt.string('May I have your name? ')
     print(f'Hello, {name}!')
-    return name
-
-
-def number_of_rounds(name, receive_expression, true_expression):
+    print(RULES_GAME)
     count_true_answer = 0
-    while count_true_answer < 3:
-        expression = receive_expression()
-        print(f'Question: {expression}')
+    while count_true_answer < NUM_OF_ROUNDS:
+        question, right_answer = get_question_and_answer()
+        print(f'Question: {question}')
         answer_user = prompt.string('Your answer: ')
-        right_answer = true_expression(expression)
         if answer_user == right_answer:
             count_true_answer += 1
             print('Correct!')

@@ -1,16 +1,17 @@
 from random import randint, choice
 
 
-def receive_expression():
-    expression = f'{randint(1, 101)} {choice(["+", "-", "*"])} {randint(1, 101)}'
-    return expression
+RULES_GAME = 'What is the result of the expression?'
 
 
-def true_expression(expression):
-    split_expression = expression.split()
-    if split_expression[1] == '+':
-        return f'{int(split_expression[0]) + int(split_expression[-1])}'
-    elif split_expression[1] == '-':
-        return f'{int(split_expression[0]) - int(split_expression[-1])}'
+def get_question_and_answer():
+    first_num = randint(1, 101)
+    second_num = randint(1, 101)
+    operation_on_num = choice(["+", "-", "*"])
+    expression = f'{first_num} {operation_on_num} {second_num}'
+    if operation_on_num == '+':
+        return expression, f'{first_num + second_num}'
+    elif operation_on_num == '-':
+        return expression, f'{first_num - second_num}'
     else:
-        return f'{int(split_expression[0]) * int(split_expression[-1])}'
+        return expression, f'{first_num * second_num}'
